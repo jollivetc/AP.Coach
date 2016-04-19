@@ -1,0 +1,67 @@
+
+<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+  <h3 class="page-title "><i class="fa  fa-slideshare"></i> Detail d'un training </h3>
+</div>
+<div class="clearfix"></div>
+<div class="panel panel-default" >
+  <div class="panel-body">
+
+    <form class="form-horizontal">
+      <fieldset>
+        <div class="form-group">
+          <div class="col-md-5">
+            <button type="button" class="btn btn-sm btn-info" ng-show="!detailTraining.edition" ng-click="detailTraining.editer()">Editer</button>
+            <button type="button" class="btn btn-sm btn-success" ng-show="detailTraining.edition" ng-click="detailTraining.save()">Enregistrer</button>
+            <button type="button" class="btn btn-sm btn-default" ng-show="detailTraining.edition" ng-click="detailTraining.annuler()">Annuler</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="name" class="col-lg-2 control-label">Titre</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="name" ng-disabled="!detailTraining.edition" ng-model="detailTraining.training.name" placeholder="Titre de la formation">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="desc" class="col-lg-2 control-label">Description</label>
+          <div class="col-lg-10">
+            <textarea  class="form-control" id="desc" rows="3" ng-disabled="!detailTraining.edition" ng-model="detailTraining.training.description"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="url" class="col-lg-2 control-label">Url Repo.</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="url" ng-disabled="!detailTraining.edition" ng-model="detailTraining.training.repositoryUrl" placeholder="Titre de la formation">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label  class="col-lg-2 control-label">Niveaux</label>
+          <div class="col-lg-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="levels" ng-disabled="!detailTraining.edition" ng-model="detailTraining.training.level" id="optionsRadios1" value="BEGINNER" >
+                Débutant
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="levels" ng-disabled="!detailTraining.edition" ng-model="detailTraining.training.level" id="optionsRadios2" value="INTERMEDIATE">
+                Intermediaire
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="levels" ng-disabled="!detailTraining.edition" ng-model="detailTraining.training.level" id="optionsRadios3" value="ADVANCED">
+                Avancé
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

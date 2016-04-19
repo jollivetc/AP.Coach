@@ -1,0 +1,19 @@
+
+
+<div class="panel panel-default" style="min-height: 200px">
+<div class="panel-body">
+  <div class="col-lg-6 col-sm-6 col-xs-12 mg-bt-xs">
+    <span class="text text-thin">Les Prochaines Sessions</span>
+  </div>
+  <div class="next-session col-lg-12 mg-bt-xs" ng-repeat="session in nextSessionsCtrl.sessions">
+    <div class="panel panel-default">
+      <div class="panel-body">
+    <div class="col-md-4">
+      <div><span class="text-bold text"> {{session.training.name}} </span> le {{session.date | date: 'dd/MM/yyyy'}}</div>
+      <div> à {{session.location}} - {{session.attendees.length}} participants</div>
+    </div>
+      </div>
+      </div>
+    </div>
+</div>
+</div>
