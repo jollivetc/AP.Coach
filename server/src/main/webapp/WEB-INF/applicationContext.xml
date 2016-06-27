@@ -57,9 +57,9 @@
     <bean id="aptrainingDS"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:8889/aptraining"/>
-        <property name="username" value="apside" />
-        <property name="password" value="apside" />
+        <property name="url" value="jdbc:mysql://localhost:3306/aptraining"/>
+        <property name="username" value="root" />
+        <property name="password" value="mypassword" />
     </bean>
 
 </beans>

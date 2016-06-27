@@ -1,4 +1,17 @@
 --
+-- create DB
+--
+
+create database aptraining;
+
+--
+-- select db
+--
+
+use aptraining;
+
+
+--
 -- Structure de la table `Agency`
 --
 
